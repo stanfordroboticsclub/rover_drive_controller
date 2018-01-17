@@ -9,7 +9,7 @@
 
   <node ns="rover" name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true" launch-prefix="">
     <rosparam command="load" file="$(find rover_drive_controller)/config/can0.yaml" />
-    <rosparam command="load" file="$(find rover_drive_controller)/config/arm_driver.yaml" />
+    <rosparam command="load" file="$(find rover_drive_controller)/config/rover_driver.yaml" />
   </node>
 
   <rosparam ns="rover" command="load" file="$(find rover_drive_controller)/config/rover_controller.yaml" />
