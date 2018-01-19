@@ -8,5 +8,5 @@ defaults:
   eds_pkg: rover_drive_controller
   eds_file: "config/C5_E.eds"
 nodes:
-  wheel:
+  motor_test_wheel_joint:
     id: 1
