@@ -8,11 +8,5 @@ defaults:
   eds_pkg: rover_drive_controller
   eds_file: "config/C5_E.eds"
 nodes:
-  wheel_1:
+  wheel:
     id: 1
-  wheel_2:
-    id: 2
-  wheel_3:
-    id: 3
-  wheel_4:
-    id: 4

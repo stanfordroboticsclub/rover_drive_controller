@@ -5,5 +5,4 @@ diff_drive_controller:
   publish_rate: 50
   pose_covariance_diagonal: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  # TODO: set these
   twist_covariance_diagonal: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0] 
-  
-  
+  cmd_vel_timeout: 0.25
