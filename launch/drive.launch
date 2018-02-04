@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- launch joystick node -->
+  <node pkg="joy" type="joy_node" name="joy_node" />
+  <node pkg="rover_drive_controller" type="drive_node" name="drive_node" output="screen"/>
+  
+  <!-- publish robot state to tf -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find rover_drive_controller)/urdf/rover.urdf.xacro'" />
+
+  
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+  </node>
+
+  <!-- CANopen specific stuff 
+  <node ns="rover" name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true" launch-prefix="">
+    <rosparam command="load" file="$(find rover_drive_controller)/config/can0.yaml" />
+    <rosparam command="load" file="$(find rover_drive_controller)/config/rover_driver.yaml" />
+  </node>
+  -->
+  
+<!--  <rosparam ns="rover" command="load" file="$(find rover_drive_controller)/config/rover_controller.yaml" /> 
+
+-->
+  <!-- figure out controller spawning -->
+<!--
+  <rosparam ns="/script_server/rover" command="load" file="$(find rover_drive_controller)/config/joint_configurations.yaml" />
+
+-->
+
+
+</launch>
