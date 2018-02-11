@@ -1,0 +1,22 @@
+bus:
+  device: can0
+sync:
+  interval_ms: 10
+  overflow: 0
+name: rover
+defaults:
+  eds_pkg: rover_drive_controller
+  eds_file: "config/C5_E.eds"
+nodes:
+  wheel_front_left: 
+    id: 1
+    joint: rover_joint_front_left
+  wheel_front_right:
+    id: 2
+    joint: rover_joint_front_right
+  wheel_back_left:
+    id: 3
+    joint: rover_joint_back_left
+  wheel_back_right:
+    id: 4
+    joint: rover_joint_back_right

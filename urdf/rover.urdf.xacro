@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
-  <!-- TODO: design robot-->
+  <transmission name="rover_transmission" />
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rover_joint_front_left">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rover_wheel_front_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
 </robot>

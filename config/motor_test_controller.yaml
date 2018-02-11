@@ -1,6 +1,0 @@
-motor_test_joint_velocity_controller:
-  type: velocity_controllers/JointVelocityController
-  joint: rig1_plate_joint
-  required_drive_mode: 3
-
-# TODO: add more drive modes
