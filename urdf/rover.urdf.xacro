@@ -1,11 +1,41 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
-  <transmission name="rover_transmission" />
+  <transmission name="rover_transmission_front_left" />
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="rover_joint_front_left">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="rover_wheel_front_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rover_transmission_front_right" />
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rover_joint_front_right">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rover_wheel_front_right">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rover_transmission_back_right" />
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rover_joint_back_left">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rover_wheel_back_left">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="rover_transmission_back_right" />
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rover_joint_back_right">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rover_wheel_back_right">
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
