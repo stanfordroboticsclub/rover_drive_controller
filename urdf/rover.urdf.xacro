@@ -1,5 +1,31 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
+  <link name="rover_link_front_left" />
+  <link name="rover_link_front_right" />
+  <link name="rover_link_back_left" />
+  <link name="rover_link_back_right" />
+  <link name="rover_link_base" />
+
+  <joint name="rover_joint_front_left" type="continuous">
+    <parent link="rover_link_base" />
+    <child link="rover_link_front_left" />
+  </joint>
+
+  <joint name="rover_joint_front_right" type="continuous">
+    <parent link="rover_link_base" />
+    <child link="rover_link_front_right" />
+  </joint>
+
+  <joint name="rover_joint_back_left" type="continuous">
+    <parent link="rover_link_base" />
+    <child link="rover_link_back_left" />
+  </joint>
+
+  <joint name="rover_joint_back_right" type="continuous">
+    <parent link="rover_link_base" />
+    <child link="rover_link_back_right" />
+  </joint>
+
   <transmission name="rover_transmission_front_left">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="rover_joint_front_left">
