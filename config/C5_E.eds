@@ -1614,7 +1614,7 @@ ParameterName=Homing method
 ObjectType=0x7
 DataType=0x0002
 AccessType=rww
-DefaultValue=0x23
+DefaultValue=0x0
 PDOMapping=1
 
 [6099]

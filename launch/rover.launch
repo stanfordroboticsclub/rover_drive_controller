@@ -2,7 +2,7 @@
 <launch>
   <param name="robot_description" command="$(find xacro)/scripts/xacro --inorder '$(find rover_drive_controller)/urdf/rover.urdf.xacro'" />
 
-  <node name="driver" pkg="canopen_motor_node" type="canopen_motor_node">
+  <node name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen">
     <rosparam command="load" file="$(find rover_drive_controller)/config/can.yaml" />
     <rosparam command="load" file="$(find rover_drive_controller)/config/motor_driver.yaml" />
   </node>
