@@ -1794,7 +1794,7 @@ ParameterName=Supported drive modes
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0xAF
+DefaultValue=0x15
 PDOMapping=1
 
 [6505]
@@ -4909,4 +4909,3 @@ DataType=0x0007
 AccessType=ro
 DefaultValue=0x00
 PDOMapping=0
-

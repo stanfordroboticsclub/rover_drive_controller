@@ -1,0 +1,357 @@
+<robot
+  name="rover_drive_train.urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0482126606920046 -0.754728735469034 -0.0144346759921354"
+        rpy="0 0 0" />
+      <mass
+        value="5.75727481463369" />
+      <inertia
+        ixx="0.148157813642014"
+        ixy="-0.00136941235470607"
+        ixz="-0.0166120287651177"
+        iyy="0.211443649946076"
+        iyz="-1.16294222168376E-05"
+        izz="0.0733344346218237" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_rocker">
+    <inertial>
+      <origin
+        xyz="-0.000557888554961139 0.0316146597748911 -0.233918441683012"
+        rpy="0 0 0" />
+      <mass
+        value="3.53538870837828" />
+      <inertia
+        ixx="0.454346566560901"
+        ixy="9.91317080171849E-05"
+        ixz="-0.000423790715614464"
+        iyy="0.115664268294054"
+        iyz="0.159976237751864"
+        izz="0.37146039403717" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/right_rocker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/right_rocker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rocker_joint"
+    type="fixed">
+    <origin
+      xyz="0.17386 -0.32588 -0.72921"
+      rpy="0.45433 4.8942E-13 1.7402" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_rocker" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-0.0638523781360152 -0.00638436960214012 0.0387148654977496"
+        rpy="0 0 0" />
+      <mass
+        value="1.1794922418287" />
+      <inertia
+        ixx="0.000196767909467314"
+        ixy="-1.31729287105525E-09"
+        ixz="7.37127034216266E-16"
+        iyy="2.22593935333306E-14"
+        iyz="-5.87586275593444E-10"
+        izz="0.000196767909467357" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57075 0 0" />
+      <geometry>
+        <cylinder length="0.025" radius="0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00088417 -0.73374 -0.043429"
+      rpy="-3.1416 -0.055664 -1.5708" />
+    <parent
+      link="right_rocker" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back_right_wheel">
+    <inertial>
+      <origin
+        xyz="9.91515528570019E-08 -0.0472154111177524 -1.22631083065983E-08"
+        rpy="0 0 0" />
+      <mass
+        value="1.1794922425231" />
+      <inertia
+        ixx="0.000196767909533167"
+        ixy="3.75064062652681E-10"
+        ixz="-1.70933260459168E-16"
+        iyy="2.22607423534762E-14"
+        iyz="1.39277517109158E-09"
+        izz="0.000196767909534602" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/back_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57075 0 0" />
+      <geometry>
+        <cylinder length="0.025" radius="0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.051744 0.58689 -0.691"
+      rpy="-2.1651E-15 0.73246 1.5708" />
+    <parent
+      link="right_rocker" />
+    <child
+      link="back_right_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_rocker">
+    <inertial>
+      <origin
+        xyz="-0.000557888554970853 0.252954601809629 0.148282341683018"
+        rpy="0 0 0" />
+      <mass
+        value="3.53538870837836" />
+      <inertia
+        ixx="0.4543465665609"
+        ixy="-0.000392911245744934"
+        ixz="0.000187206888607617"
+        iyy="0.115664268294048"
+        iyz="-0.159976237751859"
+        izz="0.371460394037177" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/left_rocker.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/left_rocker.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rocker_joint"
+    type="fixed">
+    <origin
+      xyz="-0.360150051828305 0.336704046854873 -0.915642478858881"
+      rpy="2.6444081811617 4.88947062770704E-13 1.74019593574699" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_rocker" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="back_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.0638523828785051 -0.0109359900954141 0.0387148623298141"
+        rpy="0 0 0" />
+      <mass
+        value="1.17949224237241" />
+      <inertia
+        ixx="0.000196767909519715"
+        ixy="-1.04888867470172E-09"
+        ixz="5.04499917285595E-16"
+        iyy="2.22604017500975E-14"
+        iyz="-9.90118236109835E-10"
+        izz="0.000196767909518639" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/back_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57075 0 0" />
+      <geometry>
+        <cylinder length="0.025" radius="0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0064076 -0.38113 -0.026884"
+      rpy="3.1416 0.91335 1.5708" />
+    <parent
+      link="left_rocker" />
+    <child
+      link="back_left_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.063852 -0.010936 0.038715"
+        rpy="0 0 0" />
+      <mass
+        value="1.1795" />
+      <inertia
+        ixx="0.00019677"
+        ixy="-1.0489E-09"
+        ixz="5.037E-16"
+        iyy="2.2259E-14"
+        iyz="-9.9011E-10"
+        izz="0.00019677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_drive_train.urdf/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57075 0 0" />
+      <geometry>
+        <cylinder length="0.025" radius="0.14" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.016436 0.8707 0.56446"
+      rpy="-3.1416 1.1247 1.5708" />
+    <parent
+      link="left_rocker" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

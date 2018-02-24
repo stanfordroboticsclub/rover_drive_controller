@@ -6,67 +6,63 @@
   <link name="rover_link_back_right" />
   <link name="rover_link_base" />
 
-  <joint name="rover_joint_front_left" type="continuous">
+  <joint name="rover_wheel_front_left" type="continuous">
     <parent link="rover_link_base" />
     <child link="rover_link_front_left" />
   </joint>
 
-  <joint name="rover_joint_front_right" type="continuous">
+  <joint name="rover_wheel_front_right" type="continuous">
     <parent link="rover_link_base" />
     <child link="rover_link_front_right" />
   </joint>
 
-  <joint name="rover_joint_back_left" type="continuous">
+  <joint name="rover_wheel_back_left" type="continuous">
     <parent link="rover_link_base" />
     <child link="rover_link_back_left" />
   </joint>
 
-  <joint name="rover_joint_back_right" type="continuous">
+  <joint name="rover_wheel_back_right" type="continuous">
     <parent link="rover_link_base" />
     <child link="rover_link_back_right" />
   </joint>
 
   <transmission name="rover_transmission_front_left">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rover_joint_front_left">
+    <joint name="rover_wheel_front_left">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="rover_wheel_front_left">
+    <actuator name="rover_motor_front_left">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 
   <transmission name="rover_transmission_front_right">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rover_joint_front_right">
+    <joint name="rover_wheel_front_right">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="rover_wheel_front_right">
+    <actuator name="rover_motor_front_right">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 
   <transmission name="rover_transmission_back_right">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rover_joint_back_left">
+    <joint name="rover_wheel_back_left">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="rover_wheel_back_left">
+    <actuator name="rover_motor_back_left">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 
   <transmission name="rover_transmission_back_right">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="rover_joint_back_right">
+    <joint name="rover_wheel_back_right">
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
-    <actuator name="rover_wheel_back_right">
+    <actuator name="rover_motor_back_right">
       <mechanicalReduction>1</mechanicalReduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 </robot>

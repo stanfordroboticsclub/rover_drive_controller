@@ -7,10 +7,7 @@ defaults:
 nodes:
   wheel_front_left: 
     id: 1
-    joint: rover_joint_front_left
+    joint: front_left_wheel_joint
   wheel_front_right:
     id: 2
-    joint: rover_joint_front_right
-  wheel_back_left:
-    id: 3
-    joint: rover_joint_back_left
+    joint: front_right_wheel_joint
