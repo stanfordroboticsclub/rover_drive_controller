@@ -9,6 +9,10 @@
 
   <rosparam command="load" file="$(find rover_drive_controller)/config/drive_controller.yaml" />
   <node name="rover_controller_spawner" pkg="controller_manager" type="spawner" args="rover_drive_controller" />
-  <node name="joy_node" pkg="joy" type="joy_node" />
-  <node name="teleop_twist_joy_node" pkg="teleop_twist_joy" type="teleop_node" />
+  <node name="joy_node" pkg="joy" type="joy_node">
+    <param name="autorepeat_rate" type="double" value="100" />
+  </node>
+  <node name="teleop_twist_joy_node" pkg="teleop_twist_joy" type="teleop_node">
+    <remap from="cmd_vel" to="/rover_drive_controller/cmd_vel" />
+  </node>
 </launch>

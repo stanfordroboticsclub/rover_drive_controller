@@ -4,6 +4,9 @@ defaults:
   eds_file: "config/C5_E.eds"
   motor_layer:
     switching_state: 4
+  vel_to_device: "vel*60"
+  vel_from_device: "obj6064/60"
+
 nodes:
   wheel_front_left: 
     id: 1

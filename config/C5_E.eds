@@ -1487,7 +1487,7 @@ ParameterName=Profile acceleration
 ObjectType=0x7
 DataType=0x0007
 AccessType=rww
-DefaultValue=0x1F4
+DefaultValue=0xC8
 PDOMapping=1
 
 [6084]
@@ -1495,7 +1495,7 @@ ParameterName=Profile deceleration
 ObjectType=0x7
 DataType=0x0007
 AccessType=rww
-DefaultValue=0x1F4
+DefaultValue=0xC8
 PDOMapping=1
 
 [6085]
@@ -2010,7 +2010,7 @@ ParameterName=Peak current
 ObjectType=0x7
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x708
+DefaultValue=0x2710
 PDOMapping=0
 
 [2032]
