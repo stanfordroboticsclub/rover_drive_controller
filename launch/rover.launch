@@ -14,5 +14,8 @@
   </node>
   <node name="teleop_twist_joy_node" pkg="teleop_twist_joy" type="teleop_node">
     <remap from="cmd_vel" to="/rover_drive_controller/cmd_vel" />
+    <param name="scale_linear_turbo" type="double" value="2.0" />
+    <param name="scale_angular_turbo" type="double" value="2.0" />
+    <param name="enable_turbo_button" type="int" value="5" />
   </node>
 </launch>

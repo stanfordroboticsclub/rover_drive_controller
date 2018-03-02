@@ -9,14 +9,14 @@ defaults:
 
 nodes:
   wheel_front_left: 
-    id: 1
+    id: 3
     joint: front_left_wheel_joint
   wheel_front_right:
-    id: 2
+    id: 4
     joint: front_right_wheel_joint
   wheel_back_right:
-    id: 3
+    id: 1
     joint: back_right_wheel_joint
   wheel_back_left:
-    id: 4
+    id: 2
     joint: back_left_wheel_joint
