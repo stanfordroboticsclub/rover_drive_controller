@@ -1261,7 +1261,7 @@ ParameterName=Modes of operation
 ObjectType=0x7
 DataType=0x0002
 AccessType=rww
-DefaultValue=0x00
+DefaultValue=0xFE
 PDOMapping=1
 
 [6061]
@@ -2010,7 +2010,7 @@ ParameterName=Peak current
 ObjectType=0x7
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x2710
+DefaultValue=30000
 PDOMapping=0
 
 [2032]
@@ -3686,7 +3686,7 @@ ParameterName=Motor drive submode select
 ObjectType=0x7
 DataType=0x0007
 AccessType=rww
-DefaultValue=0x00
+DefaultValue=0x41
 PDOMapping=1
 
 [3203]
