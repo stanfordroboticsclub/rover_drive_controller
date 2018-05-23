@@ -14,9 +14,9 @@ nodes:
   wheel_front_right:
     id: 2
     joint: front_right_wheel_joint
-#   wheel_back_left:
-#     id: 3
-#     joint: back_left_wheel_joint
-#   wheel_back_right:
-#     id: 4
-#     joint: back_right_wheel_joint
+  wheel_back_left:
+    id: 3
+    joint: back_left_wheel_joint
+  wheel_back_right:
+    id: 4
+    joint: back_right_wheel_joint
