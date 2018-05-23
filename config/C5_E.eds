@@ -405,7 +405,7 @@ ParameterName=Producer heartbeat time
 ObjectType=0x7
 DataType=0x0006
 AccessType=rw
-DefaultValue=0x00
+DefaultValue=20
 PDOMapping=0
 
 [1400]
