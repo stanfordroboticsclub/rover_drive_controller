@@ -7,3 +7,31 @@ rover_drive_controller:
   twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
   cmd_vel_timeout: 0.25
   required_drive_mode: 3
+rover_dig_front_right_controller:
+  type: "joint_velocity_controller/JointVelocityController"
+  joint: "front_right_wheel_joint"
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  publish_rate: 50
+  cmd_vel_timeout: 0.25
+  required_drive_mode: 3
+rover_lock_front_left_controller:
+  type: "joint_velocity_controller/JointVelocityController"
+  joint: "front_left_wheel_joint"
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  publish_rate: 50
+  cmd_vel_timeout: 0.25
+  required_drive_mode: 3
+rover_lock_back_left_controller:
+  type: "joint_velocity_controller/JointVelocityController"
+  joint: "back_left_wheel_joint"
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  publish_rate: 50
+  cmd_vel_timeout: 0.25
+  required_drive_mode: 3
+rover_lock_back_right_controller:
+  type: "joint_velocity_controller/JointVelocityController"
+  joint: "back_right_wheel_joint"
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  publish_rate: 50
+  cmd_vel_timeout: 0.25
+  required_drive_mode: 3
